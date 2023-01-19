@@ -12,10 +12,6 @@ import GlobalStyles from '../GlobalStyle';
 const Identification = () => {
     const [isShowingText, setIsShowingText] = useState(true);
 
-    function switchPage() {
-        setIsShowingText(!isShowingText);
-    }
-
     return (
         <SafeAreaView>
             <ScrollView>
@@ -27,7 +23,7 @@ const Identification = () => {
                     </TouchableOpacity>
                     <View style={[GlobalStyles.flex, mt(110)]}>
                         <Text style={GlobalStyles.text}>{isShowingText ? "Pas de compte ? " : "Déjà inscris ? "}</Text>
-                        <Text onPress={switchPage} style={GlobalStyles.textGreen}>{isShowingText ? "Inscrivez-vous ici" : "Connectez-vous ici"}</Text>
+                        <Text onPress={() => setIsShowingText(!isShowingText)} style={GlobalStyles.textGreen}>{isShowingText ? "Inscrivez-vous ici" : "Connectez-vous ici"}</Text>
                     </View>
                 </View>
             </ScrollView>

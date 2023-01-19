@@ -1,5 +1,5 @@
-import React, {useState, useEffect} from 'react';
-import { View, SafeAreaView, Text, TextInput, TouchableOpacity } from 'react-native';
+import React from 'react';
+import { View } from 'react-native';
 
 //Components
 import Input from '../components/Input';
